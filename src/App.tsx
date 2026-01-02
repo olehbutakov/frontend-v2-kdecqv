@@ -1,22 +1,28 @@
-import { Link, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import { useI18n } from './i18n/I18nContext';
-import { LanguageSwitcher } from './components/common/LanguageSwitcher/LanguageSwitcher.tsx';
+import { Home } from './pages/Home.tsx';
+import { Applications } from './pages/Applications.tsx';
+import { ApplicationForm } from './pages/ApplicationForm.tsx';
+import { Header } from './components/common/Header/Header.tsx';
+
+/**
+ * TODO:
+ * 1. Create header with logo, nav and language selector
+ * 1.1. Aadd styles to header and its components
+ * 2. Create common components (button, input) probably that's it for now
+ * 3. Create product card component
+ * 4. Create applications table component
+ * 5. Write all tests for these components
+ */
 
 function App() {
-  const { t } = useI18n();
-
   return (
     <div>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/applications">Applications</Link>
-        <LanguageSwitcher />
-      </nav>
-
+      <Header />
       <Routes>
-        <Route path="/" element={<div>{t('app.hello')}</div>} />
-        <Route path="/applications" element={<div>{t('app.hello')}</div>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/applications" element={<Applications />} />
+        <Route path="/applications/:id" element={<ApplicationForm />} />
       </Routes>
     </div>
   );

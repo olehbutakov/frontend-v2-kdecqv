@@ -16,10 +16,9 @@ export type TranslationKey = keyof typeof enUS;
 // Locale metadata
 export interface LocaleInfo {
   name: string;
-  flag: string;
 }
 
 export const LOCALE_INFO: Record<Locale, LocaleInfo> = {
-  'en-US': { name: 'English (US)', flag: '🇺🇸' },
-  'fr-CA': { name: 'Français (Canada)', flag: '🇨🇦' },
+  'en-US': { name: 'English (US)' },
+  'fr-CA': { name: 'Français (Canada)' },
 };

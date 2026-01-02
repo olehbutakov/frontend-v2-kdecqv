@@ -1,0 +1,19 @@
+.nav-link {
+  display: inline-block;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Added just in case */
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  background-color: #eee;
+  color: #000;
+}
+
+.nav-link--active {
+  background-color: #eee;
+}

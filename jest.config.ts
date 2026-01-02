@@ -31,5 +31,10 @@ const config: Config = {
       lines: 70,
     },
   },
+  coveragePathIgnorePatterns: [
+    '<rootDir>/src/test/', // Exclude the entire folder
+    '/node_modules/', // node_modules is ignored by default. Adding just in case...
+    '<rootDir>/src/i18n/types.ts', // Exclude i18n types
+  ],
 };
 export default config;
