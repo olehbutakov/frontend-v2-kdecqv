@@ -140,3 +140,5 @@ Here's a list of things that I think could improve this tiny app:
 
 - Add products search
 - Add applications table search
+- Save selected locale. Could be done in multiple ways like using query params, localStorage or handle via backend as a user specific setting or combination of those
+- Get preferred locale from browser headers or from the store of choice

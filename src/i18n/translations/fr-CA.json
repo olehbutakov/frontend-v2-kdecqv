@@ -1,4 +1,6 @@
 {
+  "general.error.message": "Une erreur est survenue :(",
+
   "navigation.logo.alt.text": "Logo Nesto",
   "navigation.home": "Accueil",
   "navigation.applications": "Demandes",
@@ -7,6 +9,9 @@
   "product.card.type.variable": "Variable",
   "product.card.type.best": "Taux {{type}}",
   "product.card.button.text": "Choisir le demandeur",
+
+  "application.create.error.log": "La création de la demande a échoué",
+  "application.create.error.message": "Impossible de créer la demande. Veuillez réessayer.",
 
   "applicant.form.title": "Infos du demandeur",
   "applicant.form.firstName.label": "Prénom",

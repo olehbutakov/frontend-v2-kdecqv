@@ -44,7 +44,7 @@ export const Home = () => {
       navigate(`/applications/${newApplication.id}`);
     } catch {
       setLoadingProductId(null);
-      console.error('Failed to create application');
+      console.error(t('application.create.error.log'));
     }
   };
 
@@ -54,11 +54,11 @@ export const Home = () => {
         {productLoading && <LogoLoader />}
 
         {!productLoading && productError && (
-          <div>{t('general.error.message')}</div>
+          <div className="error-banner">{t('general.error.message')}</div>
         )}
         {createApplicationError && (
           <div className="error-banner">
-            Failed to create application. Please try again.
+            {t('application.create.error.message')}
           </div>
         )}
 

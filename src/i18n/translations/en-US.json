@@ -10,6 +10,9 @@
   "product.card.type.best": "Best {{type}}",
   "product.card.button.text": "Select applicant info",
 
+  "application.create.error.log": "Failed to create application",
+  "application.create.error.message": "Failed to create application. Please try again.",
+
   "applicant.form.title": "Main applicant information",
   "applicant.form.firstName.label": "First name",
   "applicant.form.lastName.label": "Last name",
