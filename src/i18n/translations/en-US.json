@@ -1,3 +1,24 @@
 {
-  "app.hello": "Hello world!"
+  "general.error.message": "Something went wrong :(",
+
+  "navigation.logo.alt.text": "Nesto logo",
+  "navigation.home": "Home",
+  "navigation.applications": "Applications",
+  
+  "product.card.type.fixed": "Fixed",
+  "product.card.type.variable": "Variable",
+  "product.card.type.best": "Best {{type}}",
+  "product.card.button.text": "Select applicant info",
+
+  "applicant.form.title": "Main applicant information",
+  "applicant.form.firstName.label": "First name",
+  "applicant.form.lastName.label": "Last name",
+  "applicant.form.email.label": "Email",
+  "applicant.form.phone.label": "Phone",
+
+  "applications.table.column.name.header": "Name",
+  "applications.table.column.email.header": "Email",
+  "applications.table.column.phone.header": "Phone",
+  "applications.table.column.product.header": "Product",
+  "applications.table.edit.button.text": "Edit"
 }

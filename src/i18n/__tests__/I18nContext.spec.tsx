@@ -23,7 +23,9 @@ function TestComponent() {
   return (
     <>
       <div data-testid="locale">{locale}</div>
-      <div data-testid="simple">{t('app.hello')}</div>
+      <div data-testid="simple">
+        {t('app.hello' as unknown as TranslationKey)}
+      </div>
       <div data-testid="plural-one">
         {t('item' as unknown as TranslationKey, { count: 1 })}
       </div>

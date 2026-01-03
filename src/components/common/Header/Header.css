@@ -5,10 +5,12 @@ header {
   gap: 8px;
   padding: 16px;
   background-color: #fff;
-  border-bottom: 1px solid #262626;
+  box-shadow: 0 1px 0 0 #262626;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  left: 0;
+  right: 0;
+  z-index: 200;
 }
 
 nav {

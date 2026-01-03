@@ -1,3 +1,23 @@
 {
-  "app.hello": "Bonjour le monde"
+  "navigation.logo.alt.text": "Logo Nesto",
+  "navigation.home": "Accueil",
+  "navigation.applications": "Demandes",
+  
+  "product.card.type.fixed": "Fixe",
+  "product.card.type.variable": "Variable",
+  "product.card.type.best": "Taux {{type}}",
+  "product.card.button.text": "Choisir le demandeur",
+
+  "applicant.form.title": "Infos du demandeur",
+  "applicant.form.firstName.label": "Prénom",
+  "applicant.form.lastName.label": "Nom",
+  "applicant.form.email.label": "Courriel",
+  "applicant.form.phone.label": "Téléphone",
+
+  "applications.table.column.name.header": "Nom",
+  "applications.table.column.email.header": "Courriel",
+  "applications.table.column.phone.header": "Téléphone",
+  "applications.table.column.product.header": "Prêt",
+  "applications.table.edit.button.text": "Modifier"
 }
+

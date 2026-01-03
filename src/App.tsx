@@ -7,8 +7,6 @@ import { Header } from './components/common/Header/Header.tsx';
 
 /**
  * TODO:
- * 1. Create header with logo, nav and language selector
- * 1.1. Aadd styles to header and its components
  * 2. Create common components (button, input) probably that's it for now
  * 3. Create product card component
  * 4. Create applications table component
@@ -17,13 +15,13 @@ import { Header } from './components/common/Header/Header.tsx';
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/applications" element={<Applications />} />
-        <Route path="/applications/:id" element={<ApplicationForm />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/applications" element={<Applications />} />
+          <Route path="/applications/:id" element={<ApplicationForm />} />
+        </Routes>
     </div>
   );
 }

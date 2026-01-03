@@ -13,6 +13,10 @@ export const useAxios = <T>(config: AxiosRequestConfig) => {
     const fetchData = async () => {
       try {
         setLoading(true);
+
+        // Uncomment to demonstrate loading state
+        // await new Promise((resolve) => setTimeout(resolve, 4000));
+
         const response = await api({
           ...config,
           signal: controller.signal,

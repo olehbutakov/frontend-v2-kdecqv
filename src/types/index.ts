@@ -31,6 +31,7 @@ export type Product = {
   bestRate: number;
   created: string;
   updated: string;
+  isBest?: boolean; // Using this for grouping
 };
 
 export type Applicant = {

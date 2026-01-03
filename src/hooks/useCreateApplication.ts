@@ -12,6 +12,10 @@ export const useCreateApplication = () => {
     try {
       setLoading(true);
       setError(null);
+
+      // Uncomment to demonstrate loading state
+      // await new Promise((resolve) => setTimeout(resolve, 4000));
+
       const response = await api.post<Application>('/applications', body);
       setData(response.data);
       return response.data;

@@ -76,23 +76,53 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+.page {
+  padding-block: 2rem;
+}
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .section {
+    gap: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    gap: 48px;
+  }
+}
+
+.error-banner {
+  background-color: #fee;
+  border: 1px solid #fcc;
+  color: #c33;
+  padding: 12px;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  margin-bottom: 16px;
 }
 
 /* @media (prefers-color-scheme: light) { */

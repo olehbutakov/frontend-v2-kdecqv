@@ -15,6 +15,10 @@ export const useUpdateApplication = () => {
     try {
       setLoading(true);
       setError(null);
+
+      // Uncomment to demonstrate loading state
+      // await new Promise((resolve) => setTimeout(resolve, 4000));
+
       const response = await api.put<Application>(
         `/applications/${application_id}`,
         body
