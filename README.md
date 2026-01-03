@@ -3,6 +3,13 @@
 This project was created with `npm create vite@latest my-app -- --template react-ts` command.
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+## Table of Contents
+- [Initial Setup](#initial-setup)
+- [Testing and Formatting](#testing-and-formatting)
+- [Internationalization (i18n)](#internationalization-i18n)
+- [Project Structure](#project-structure)
+- [Potential Improvements](#potential-improvements)
+
 ## Initial Setup
 
 ### Prerequisites
@@ -22,7 +29,7 @@ npm install
 In the root of the project run:
 
 ```bash
-npm run start
+npm start
 ```
 App should be running at `http://localhost:5173`
 
@@ -32,7 +39,7 @@ App should be running at `http://localhost:5173`
 npm run build
 ```
 
-## Testing and formatting
+## Testing and Formatting
 
 Run all tests:
 
@@ -90,7 +97,7 @@ This project uses a **custom, lightweight i18n solution** instead of third-party
 3. Use in components `t('applications.form.firstName.label')`
 
 
-## Project structure
+## Project Structure
 
 ```bash
 src/
@@ -98,21 +105,38 @@ src/
 │   ├── translations/       # Translation JSON files
 │   ├── types.ts            # i18n type definitions
 │   └── I18nContext.tsx     # i18n Context Provider
-├── components/             # Reusable components
+├── components/
 │   └── common/
-│       └── LanguageSwitcher/
+│       └── LanguageSwitcher/ # Components are stored in their own folders with all related files
 │           ├── __tests__/
+│           ├── components/ (optional)
+│           ├── LanguageSwitcher.css (optional)
 │           └── LanguageSwitcher.tsx
 ├── pages/                  # Page components
-│   ├── Products/
-│   └── Applications/
+│   └── Home/
+│       ├── __tests__/
+│       ├── components/ (optional)
+│       ├── Home.css (optional)
+│       └── Home.tsx
 ├── services/               # API services
 │   ├── __tests__/
 │   └── api.ts
+├── hooks/                  # Reusable hooks
+│   ├── __tests__/
+│   └── useAxios.ts
+├── types/                  # Shared types
+│   └── index.ts
+├── test/
+│   ├── utils.tsx           # Custom test utilities
+│   └── setupTests.ts       # Jest setup
 ├── App.tsx                 # Main app component
 └── main.tsx                # Entry point
-
-test/
-├── utils.tsx               # Custom test utilities
-└── setupTests.ts           # Jest setup
 ```
+
+
+## Potential Improvements
+
+Here's a list of things that I think could improve this tiny app:
+
+- Add products search
+- Add applications table search
