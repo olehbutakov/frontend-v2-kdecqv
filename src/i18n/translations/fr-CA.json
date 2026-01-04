@@ -13,11 +13,18 @@
   "application.create.error.log": "La création de la demande a échoué",
   "application.create.error.message": "Impossible de créer la demande. Veuillez réessayer.",
 
-  "applicant.form.title": "Infos du demandeur",
-  "applicant.form.firstName.label": "Prénom",
-  "applicant.form.lastName.label": "Nom",
-  "applicant.form.email.label": "Courriel",
-  "applicant.form.phone.label": "Téléphone",
+  "form.error.required": "Ce champ est requis",
+  "form.error.email.invalid": "Adresse courriel invalide",
+  "form.error.phone.invalid": "Numéro de téléphone invalide",
+
+  "application.form.title": "Infos du demandeur",
+  "application.form.firstName.label": "Prénom",
+  "application.form.lastName.label": "Nom",
+  "application.form.email.label": "Courriel",
+  "application.form.phone.label": "Téléphone",
+  "application.form.submit.button.text": "Enregistrer le demandeur",
+  "application.form.error.message": "Impossible de mettre à jour le demandeur. Veuillez réessayer.",
+  "application.form.success.message": "Infos du demandeur mises à jour.",
 
   "applications.table.column.name.header": "Nom",
   "applications.table.column.email.header": "Courriel",

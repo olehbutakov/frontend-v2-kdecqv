@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { LogoLoader } from '../components/common/LogoLoader/LogoLoader';
-import { ProductsList } from '../components/common/ProductsList/ProductsList';
-import { useCreateApplication } from '../hooks/useCreateApplication';
-import { useGetProducts } from '../hooks/useGetProducts';
-import type { Product } from '../types';
-import { useI18n } from '../i18n/I18nContext';
+import { LogoLoader } from '../../components/common/LogoLoader/LogoLoader';
+import { ProductsList } from '../../components/common/ProductsList/ProductsList';
+import { useCreateApplication } from '../../hooks/useCreateApplication';
+import type { Product } from '../../types';
+import { useI18n } from '../../i18n/I18nContext';
+import { useProducts } from '../../context/ProductContext';
 
 export const Home = () => {
   const { t } = useI18n();
@@ -13,10 +13,10 @@ export const Home = () => {
   const [loadingProductId, setLoadingProductId] = useState<number | null>(null);
 
   const {
-    data: productsData,
-    loading: productLoading,
-    error: productError,
-  } = useGetProducts();
+    products: productsData,
+    loading: productsLoading,
+    error: productsError,
+  } = useProducts();
   const { createApplication, error: createApplicationError } =
     useCreateApplication();
 
@@ -51,9 +51,9 @@ export const Home = () => {
   return (
     <div className="page">
       <div className="container">
-        {productLoading && <LogoLoader />}
+        {productsLoading && <LogoLoader />}
 
-        {!productLoading && productError && (
+        {!productsLoading && productsError && (
           <div className="error-banner">{t('general.error.message')}</div>
         )}
         {createApplicationError && (
@@ -62,16 +62,16 @@ export const Home = () => {
           </div>
         )}
 
-        {!productLoading && !productError && groupedProducts && (
+        {!productsLoading && !productsError && groupedProducts && (
           <div className="section">
-            {groupedProducts['FIXED'].length > 0 && (
+            {groupedProducts['FIXED']?.length > 0 && (
               <ProductsList
                 products={groupedProducts?.['FIXED']}
                 productSelectHandler={handleProductSelect}
                 loadingProductId={loadingProductId}
               />
             )}
-            {groupedProducts['VARIABLE'].length > 0 && (
+            {groupedProducts['VARIABLE']?.length > 0 && (
               <ProductsList
                 products={groupedProducts?.['VARIABLE']}
                 productSelectHandler={handleProductSelect}

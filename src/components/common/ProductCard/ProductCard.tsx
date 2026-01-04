@@ -35,14 +35,9 @@ export const ProductCard = ({
         <CustomButton
           onClick={selectHandler ? () => selectHandler(id) : undefined}
           disabled={disabled}
+          loading={isLoading}
         >
-          {isLoading ? (
-            <span className="button-loader">
-              <LogoLoader />
-            </span>
-          ) : (
-            t('product.card.button.text')
-          )}
+          {t('product.card.button.text')}
         </CustomButton>
       </div>
     </div>

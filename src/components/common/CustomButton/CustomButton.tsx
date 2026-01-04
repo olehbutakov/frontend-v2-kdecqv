@@ -1,12 +1,28 @@
 import { type ButtonHTMLAttributes } from 'react';
 import './CustomButton.css';
+import { LogoLoader } from '../LogoLoader/LogoLoader';
 
-type CustomButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  loading?: boolean;
+}
 
-export const CustomButton = ({ children, ...rest }: CustomButtonProps) => {
+export const CustomButton = ({
+  loading,
+  children,
+  className,
+  ...rest
+}: CustomButtonProps) => {
+  const buttonClasses = `custom-btn ${className || ''}`.trim();
+
   return (
-    <button className="custom-btn" {...rest}>
-      {children}
+    <button className={buttonClasses} {...rest}>
+      {loading ? (
+        <span className="button-loader">
+          <LogoLoader />
+        </span>
+      ) : (
+        children
+      )}
     </button>
   );
 };

@@ -1,0 +1,42 @@
+.input-wrapper {
+  display: grid;
+  grid-template-rows: 1fr;
+  row-gap: 8px;
+  margin-bottom: 16px;
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: minmax(120px, auto) 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.input-label {
+  font-weight: 800;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.input-base {
+  padding: 8px 12px;
+  flex: 1;
+  box-sizing: border-box;
+  border: 1px solid #000;
+}
+
+.input-base:disabled {
+  background-color: #eee;
+  border-color: #ccc;
+}
+
+.input-error {
+  background-color: #fee;
+  border: 1px solid #fcc;
+  color: #c33;
+}
+
+.input-error-message {
+  color: #c33;
+}

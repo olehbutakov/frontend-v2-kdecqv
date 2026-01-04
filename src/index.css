@@ -77,7 +77,7 @@ h1 {
 }
 
 .page {
-  padding-block: 2rem;
+  padding-block: 4rem;
 }
 
 .container {
@@ -95,6 +95,25 @@ h1 {
 @media (min-width: 1024px) {
   .container {
     max-width: 1200px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 16px;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    gap: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    gap: 48px;
   }
 }
 
@@ -120,6 +139,15 @@ h1 {
   background-color: #fee;
   border: 1px solid #fcc;
   color: #c33;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.success-banner {
+  background-color: #efe;
+  border: 1px solid #cfc;
+  color: #3c3;
   padding: 12px;
   border-radius: 8px;
   margin-bottom: 16px;

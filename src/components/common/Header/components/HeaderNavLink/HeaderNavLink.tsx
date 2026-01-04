@@ -1,10 +1,10 @@
-import React from 'react';
+import { type ReactNode } from 'react';
 import { NavLink, type To } from 'react-router-dom';
 import './HeaderNavLink.css';
 
 type HeaderNavLinkProps = {
   to: To;
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 export const HeaderNavLink = ({ to, children }: HeaderNavLinkProps) => {

@@ -34,12 +34,3 @@
   font-size: 56px;
   font-weight: 900;
 }
-
-.button-loader {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
-}
