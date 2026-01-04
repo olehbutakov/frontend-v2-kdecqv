@@ -5,6 +5,7 @@ import { useProducts } from '../../context/ProductContext';
 import { useGetApplications } from '../../hooks/useGetApplications';
 import { useI18n } from '../../i18n/I18nContext';
 import { useNavigate } from 'react-router-dom';
+import { ApplicationsList } from '../../components/ApplicationsList/ApplicationsList';
 
 interface TableData {
   id: string;
@@ -69,33 +70,34 @@ export const Applications = () => {
           <div className="error-banner">{t('general.error.message')}</div>
         )}
 
-        {!isLoading && !isError && filteredTableData && (
-          <div style={{ display: 'grid', border: '1px solid #000' }}>
-            {filteredTableData.map((item) => {
-              return (
-                <div
-                  style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1fr 1fr 1fr 1fr auto',
-                    alignContent: 'center',
-                    borderBottom: '1px solid #000',
-                    verticalAlign: 'center',
-                  }}
-                >
-                  <div>{item.firstName}</div>
-                  <div>{item.email}</div>
-                  <div>{item.phone}</div>
-                  <div>{item.productName}</div>
-                  <div>
-                    <CustomButton onClick={() => handleEditClick(item.id)}>
-                      Edit
-                    </CustomButton>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        )}
+        {/* {!isLoading && !isError && filteredTableData && ( */}
+        {/*   <div style={{ display: 'grid', border: '1px solid #000' }}> */}
+        {/*     {filteredTableData.map((item) => { */}
+        {/*       return ( */}
+        {/*         <div */}
+        {/*           style={{ */}
+        {/*             display: 'grid', */}
+        {/*             gridTemplateColumns: '1fr 1fr 1fr 1fr auto', */}
+        {/*             alignContent: 'center', */}
+        {/*             borderBottom: '1px solid #000', */}
+        {/*             verticalAlign: 'center', */}
+        {/*           }} */}
+        {/*         > */}
+        {/*           <div>{item.firstName}</div> */}
+        {/*           <div>{item.email}</div> */}
+        {/*           <div>{item.phone}</div> */}
+        {/*           <div>{item.productName}</div> */}
+        {/*           <div> */}
+        {/*             <CustomButton onClick={() => handleEditClick(item.id)}> */}
+        {/*               Edit */}
+        {/*             </CustomButton> */}
+        {/*           </div> */}
+        {/*         </div> */}
+        {/*       ); */}
+        {/*     })} */}
+        {/*   </div> */}
+        {/* )} */}
+        <ApplicationsList />
       </div>
     </div>
   );
