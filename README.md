@@ -3,6 +3,10 @@
 This project was created with `npm create vite@latest my-app -- --template react-ts` command.
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+## Additional links
+- [Deployed microsite](https://frontend-v2-kdecqv.vercel.app/)
+- [Assignment demo](https://drive.google.com/file/d/1e8oxQ6pjRQYYmVwWrGYMM-6FLc2vl2xD/view?usp=sharing)
+
 ## Table of Contents
 - [Initial Setup](#initial-setup)
 - [Testing and Formatting](#testing-and-formatting)
@@ -56,7 +60,7 @@ npm run test:watch
 Run tests with coverage report:
 
 ```bash
-npm run test:watch
+npm run test:coverage
 ```
 
 **NOTE:** This project enforces minimum code coverage:
@@ -109,7 +113,6 @@ src/
 │   └── ProductContext.tsx
 ├── components/
 │   └── ApplicationsList/
-│       └── ApplicationsList/ # Components are stored in their own folders with all related files
 │           ├── __tests__/
 │           ├── components/ (optional)
 │           ├── ApplicationsList.css (optional)
