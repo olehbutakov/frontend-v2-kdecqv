@@ -11,9 +11,8 @@ import {
   type FormErrors,
   type ValidationErrorType,
 } from '../../utils/form';
-import { Link } from 'react-router-dom';
 
-interface ApplicationFormProps {
+export interface ApplicationFormProps {
   application: Application;
 }
 

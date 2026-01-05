@@ -11,7 +11,7 @@ export interface TableData {
   productName: string;
 }
 
-interface ApplicationTableProps {
+export interface ApplicationTableProps {
   data: TableData[];
 }
 

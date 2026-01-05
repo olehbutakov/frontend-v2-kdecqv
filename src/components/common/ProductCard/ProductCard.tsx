@@ -1,9 +1,8 @@
 import { CustomButton } from '../CustomButton/CustomButton';
 import './ProductCard.css';
 import { useI18n } from '../../../i18n/I18nContext';
-import { LogoLoader } from '../LogoLoader/LogoLoader';
 
-interface ProductCardProps {
+export interface ProductCardProps {
   id: number;
   type: string;
   name: string;

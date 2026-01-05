@@ -4,7 +4,7 @@ import { useGetProducts } from '../hooks/useGetProducts';
 import { type Product } from '../types';
 import type { AxiosError } from 'axios';
 
-interface ProductsContextValue {
+export interface ProductsContextValue {
   products: Product[];
   loading: boolean;
   error: AxiosError | null;

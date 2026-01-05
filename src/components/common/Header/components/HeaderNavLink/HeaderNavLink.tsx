@@ -2,7 +2,7 @@ import { type ReactNode } from 'react';
 import { NavLink, type To } from 'react-router-dom';
 import './HeaderNavLink.css';
 
-interface HeaderNavLinkProps {
+export interface HeaderNavLinkProps {
   to: To;
   children: ReactNode;
   className?: string | undefined;

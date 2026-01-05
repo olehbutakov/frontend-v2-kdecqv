@@ -1,12 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
 import './CustomSelect.css';
 
-interface Option {
+export interface Option {
   value: string;
   label: string;
 }
 
-interface SelectProps {
+export interface SelectProps {
   options: Option[];
   value: string;
   onChange: (value: string) => void;

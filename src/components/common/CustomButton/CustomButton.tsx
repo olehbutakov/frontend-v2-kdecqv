@@ -2,7 +2,7 @@ import { type ButtonHTMLAttributes } from 'react';
 import './CustomButton.css';
 import { LogoLoader } from '../LogoLoader/LogoLoader';
 
-interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   loading?: boolean;
 }
 
