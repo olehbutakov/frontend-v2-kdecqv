@@ -21,7 +21,7 @@ describe('useGetApplication', () => {
       loading: true,
       error: null,
     });
-    renderHook(() => useGetApplication(123));
+    renderHook(() => useGetApplication('123'));
     expect(mockUseAxios).toHaveBeenCalledWith({
       method: 'GET',
       url: '/applications/123',
@@ -35,7 +35,7 @@ describe('useGetApplication', () => {
       loading: true,
       error: null,
     });
-    const { result } = renderHook(() => useGetApplication(123));
+    const { result } = renderHook(() => useGetApplication('123'));
     expect(result.current.loading).toBe(true);
     expect(result.current.data).toBeNull();
     expect(result.current.error).toBeNull();
@@ -62,7 +62,7 @@ describe('useGetApplication', () => {
       loading: false,
       error: null,
     });
-    const { result } = renderHook(() => useGetApplication(123));
+    const { result } = renderHook(() => useGetApplication('123'));
     await waitFor(() => {
       expect(result.current.loading).toBe(false);
     });
@@ -83,7 +83,7 @@ describe('useGetApplication', () => {
       loading: false,
       error: mockError,
     });
-    const { result } = renderHook(() => useGetApplication(1));
+    const { result } = renderHook(() => useGetApplication('1'));
     await waitFor(() => {
       expect(result.current.loading).toBe(false);
     });

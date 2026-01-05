@@ -5,11 +5,6 @@ import { Applications } from './pages/Applications/Applications.tsx';
 import { ApplicationPage } from './pages/ApplicationPage/ApplicationPage.tsx';
 import { Header } from './components/common/Header/Header.tsx';
 
-/**
- * TODO:
- * 5. Write all tests for these components
- */
-
 function App() {
   return (
     <div className="app">
