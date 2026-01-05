@@ -3,7 +3,7 @@ import { ProductCard } from '../../components/common/ProductCard/ProductCard';
 import { useProducts } from '../../context/ProductContext';
 import { useGetApplication } from '../../hooks/useGetApplication';
 import { useI18n } from '../../i18n/I18nContext';
-import { ApplicationForm } from '../../components/common/ApplicationForm/ApplicationForm';
+import { ApplicationForm } from '../../components/ApplicationForm/ApplicationForm';
 import type { TranslationKey } from '../../i18n/types';
 import { LogoLoader } from '../../components/common/LogoLoader/LogoLoader';
 

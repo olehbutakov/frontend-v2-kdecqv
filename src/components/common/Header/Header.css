@@ -13,8 +13,8 @@ header {
   z-index: 200;
 }
 
-nav {
-  display: flex;
+.desktop-navs {
+  display: none;
   align-items: center;
   gap: 8px;
 }
@@ -23,4 +23,18 @@ nav {
   width: 120px;
   object-fit: contain;
   margin-right: 8px;
+}
+
+.mobile-hamburger {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .mobile-hamburger {
+    display: none;
+  }
+
+  .desktop-navs {
+    display: flex;
+  }
 }

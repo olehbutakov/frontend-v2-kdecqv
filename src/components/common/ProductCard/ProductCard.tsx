@@ -33,6 +33,7 @@ export const ProductCard = ({
       </div>
       <div className="product-actions">
         <CustomButton
+          className="product-button"
           onClick={selectHandler ? () => selectHandler(id) : undefined}
           disabled={disabled}
           loading={isLoading}

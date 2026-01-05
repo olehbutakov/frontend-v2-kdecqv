@@ -21,31 +21,36 @@ export const Table = <T extends object>({ data, columns }: TableProps<T>) => {
   return (
     <div className="table-container">
       <div className="table" style={{ gridTemplateColumns }}>
-        {columns.map((column) => (
-          <div key={String(column.key)} className="table-cell header-cell">
-            {column.header}
-          </div>
-        ))}
+        <div className="table-header">
+          {columns.map((column) => (
+            <div key={String(column.key)} className="table-cell header-cell">
+              {column.header}
+            </div>
+          ))}
+        </div>
 
-        {data.map((row, rowIndex) => (
-          <React.Fragment key={rowIndex}>
-            {columns.map((column) => {
-              const value = row[column.key];
-              const content = column.render
-                ? column.render(value, row)
-                : String(value ?? '');
+        <div className="table-body">
+          {data.map((row, rowIndex) => (
+            <div className="table-row" key={rowIndex}>
+              {columns.map((column) => {
+                const value = row[column.key];
+                const content = column.render
+                  ? column.render(value, row)
+                  : String(value ?? '');
 
-              return (
-                <div
-                  key={`${rowIndex}-${String(column.key)}`}
-                  className="table-cell"
-                >
-                  {content}
-                </div>
-              );
-            })}
-          </React.Fragment>
-        ))}
+                return (
+                  <div
+                    key={`${rowIndex}-${String(column.key)}`}
+                    className="table-cell"
+                  >
+                    <span className="table-header-mobile">{column.header}</span>
+                    <span className="cell-content">{content}</span>
+                  </div>
+                );
+              })}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

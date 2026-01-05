@@ -2,19 +2,22 @@ import { type ReactNode } from 'react';
 import { NavLink, type To } from 'react-router-dom';
 import './HeaderNavLink.css';
 
-type HeaderNavLinkProps = {
+interface HeaderNavLinkProps {
   to: To;
   children: ReactNode;
-};
+  className?: string | undefined;
+}
 
-export const HeaderNavLink = ({ to, children }: HeaderNavLinkProps) => {
+export const HeaderNavLink = ({
+  to,
+  children,
+  className,
+}: HeaderNavLinkProps) => {
+  const handleClasses = (isActive: boolean) =>
+    `nav-link ${className} ${isActive ? 'nav-link--active' : ''}`.trim();
+
   return (
-    <NavLink
-      to={to}
-      className={({ isActive }) =>
-        isActive ? 'nav-link nav-link--active' : 'nav-link'
-      }
-    >
+    <NavLink to={to} className={({ isActive }) => handleClasses(isActive)}>
       {children}
     </NavLink>
   );

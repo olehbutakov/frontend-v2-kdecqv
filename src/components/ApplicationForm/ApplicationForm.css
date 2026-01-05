@@ -22,5 +22,11 @@
 }
 
 .application-form-actions {
-  margin-top: 24px;
+  text-align: right;
+}
+
+@media (min-width: 1024px) {
+  .application-form-actions {
+    margin-top: 24px;
+  }
 }

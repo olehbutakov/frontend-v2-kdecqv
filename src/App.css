@@ -1,15 +1,5 @@
-#root {
-  margin: 0 auto;
-  text-align: center;
-}
-
 .app {
   display: grid;
   grid-template-rows: auto 1fr;
   min-height: 100vh;
-}
-
-.app-main {
-  min-height: 0;
-  overflow: auto;
 }

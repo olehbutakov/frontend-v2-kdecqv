@@ -4,6 +4,7 @@
   "navigation.logo.alt.text": "Nesto logo",
   "navigation.home": "Home",
   "navigation.applications": "Applications",
+  "navigation.drawer.title": "Menu",
   
   "product.card.type.fixed": "Fixed",
   "product.card.type.variable": "Variable",

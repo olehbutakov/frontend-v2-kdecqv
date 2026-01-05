@@ -7,9 +7,6 @@ import { Header } from './components/common/Header/Header.tsx';
 
 /**
  * TODO:
- * 2. Create common components (button, input) probably that's it for now
- * 3. Create product card component
- * 4. Create applications table component
  * 5. Write all tests for these components
  */
 

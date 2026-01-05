@@ -1,16 +1,17 @@
 import { useState, type ChangeEvent, type FormEvent } from 'react';
-import { useUpdateApplication } from '../../../hooks/useUpdateApplication';
-import { CustomButton } from '../CustomButton/CustomButton';
+import { useUpdateApplication } from '../../hooks/useUpdateApplication';
+import { CustomButton } from '../common/CustomButton/CustomButton';
 import { InputBase } from './components/InputBase/InputBase';
 import './ApplicationForm.css';
-import type { Applicant, Application } from '../../../types';
-import { useI18n } from '../../../i18n/I18nContext';
+import type { Applicant, Application } from '../../types';
+import { useI18n } from '../../i18n/I18nContext';
 import {
   validateApplicationForm,
   validationErrorMap,
   type FormErrors,
   type ValidationErrorType,
-} from '../../../utils/form';
+} from '../../utils/form';
+import { Link } from 'react-router-dom';
 
 interface ApplicationFormProps {
   application: Application;

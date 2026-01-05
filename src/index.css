@@ -46,10 +46,6 @@ h6 {
   line-height: 1.5;
   font-weight: 400;
 
-  /* color-scheme: light dark; */
-  /* color: rgba(255, 255, 255, 0.87); */
-  /* background-color: #242424; */
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -65,8 +61,14 @@ a:hover {
   color: #bbb;
 }
 
+html,
 body {
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
   min-width: 320px;
   min-height: 100vh;
 }
@@ -100,8 +102,7 @@ h1 {
 
 .grid {
   display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 16px;
+  gap: 16px;
   align-items: start;
 }
 
@@ -113,18 +114,21 @@ h1 {
 
 @media (min-width: 1024px) {
   .grid {
+    grid-template-columns: auto 1fr;
     gap: 48px;
   }
 }
 
 .section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 16px;
 }
 
 @media (min-width: 768px) {
   .section {
+    flex-direction: row;
     gap: 32px;
   }
 }
@@ -152,16 +156,3 @@ h1 {
   border-radius: 8px;
   margin-bottom: 16px;
 }
-
-/* @media (prefers-color-scheme: light) { */
-/*   :root { */
-/*     color: #213547; */
-/*     background-color: #ffffff; */
-/*   } */
-/*   a:hover { */
-/*     color: #747bff; */
-/*   } */
-/*   button { */
-/*     background-color: #f9f9f9; */
-/*   } */
-/* } */
